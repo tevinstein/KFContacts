@@ -83,14 +83,14 @@ export default class Contact extends Component {
         height: 140,
       },
     }
-    let details;
-    let myImages;
-    (images.length > 0 && this.state.isShowingImages) ? myImages = images.map((image) => <img key={image} className="img-thumbnail" alt="" style={style.image} src={image} />) : myImages = '';
+    let loadDetails;
+    let loadImages;
+    (images.length > 0 && this.state.isShowingImages) ? loadImages = images.map((image) => <img key={image} className="img-thumbnail" alt="" style={style.image} src={image} />) : loadImages = '';
     if (id !== selectedContact) {
-      details = '';
+      loadDetails = '';
     } else if (!this.state.isEditing) {
       //NON-EDIT MODE
-      details =
+      loadDetails =
         <div style={style.details}>
           <p className="contact-attribute">Address:</p><p> {address}</p>
           <p className="contact-attribute">Phone No:</p><p> {phoneNo}</p>
@@ -100,12 +100,12 @@ export default class Contact extends Component {
             <button className="btn btn-default" onClick={this.deleteContact}><span className="fa fa-trash"></span></button>
           </div>
           <div style={style.imagesContainer}>
-            {myImages}
+            {loadImages}
           </div>
         </div>;
     } else {
       //EDIT MODE
-      details =
+      loadDetails =
       <div style={style.details}>
         <EditContact name={name} address={address} phoneNo={phoneNo} id={id} editContact={this.editContact} />
       </div>;
@@ -113,7 +113,7 @@ export default class Contact extends Component {
     return (
       <li className="list-group-item">
         <div className="contact-name" onClick={this.onShowDetail}>{name}</div>
-        {details}
+        {loadDetails}
       </li>
     );
   }

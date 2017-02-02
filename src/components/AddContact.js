@@ -68,16 +68,16 @@ export default class AddContact extends Component {
       paddingTop: 20,
       paddingBottom: 20,
     };
-    let forms;
-    (this.state.isAdding) ? forms =
+    let loadForms;
+    (this.state.isAdding) ? loadForms =
       <div>
         <p><input type="text" className="form-control" placeholder="Insert name here" onChange={this.onNameChange} value={name} /></p>
         <p><input type="text" className="form-control" placeholder="Insert address here" onChange={this.onAddressChange} value={address} /></p>
         <p><input type="text" className="form-control" placeholder="Insert phone no here" onChange={this.onPhoneChange} value={phoneNo} /></p>
-      </div> : forms = '';
+      </div> : loadForms = '';
     return (
       <div style={container}>
-        {forms}
+        {loadForms}
         <button className="btn btn-lg btn-default btn-block" onClick={this.addContact}><span className="fa fa-plus"></span> Add Contact</button>
       </div>
     );
