@@ -1,8 +1,8 @@
 {
-  "name": "contacts",
+  "name": "KFContacts",
   "version": "0.1.0",
   "private": true,
-  "description": "contacts",
+  "description": "A contact management web app using React.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
