@@ -1,0 +1,38 @@
+body {
+    background: #FF8008;
+    background: -webkit-linear-gradient(to left, #FF8008, #FFC837);
+    background: linear-gradient(to left, #FF8008, #FFC837);
+    font-family: 'Quattrocento', serif;
+}
+
+#logo {
+    font-size: 100px;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+}
+
+p {
+  font-size: 18px;
+}
+
+.contact-attribute {
+  font-size: 16px;
+  color: #ff8d08;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.contact-name {
+  font-size: 37px;
+  font-weight: bold;
+  margin: 0px;
+  background: -webkit-linear-gradient(#FF8008, #FFC837);
+  background: -o-linear-gradient(#FF8008, #FFC837);
+  background: linear-gradient(#FF8008, #FFC837);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+#main {
+  display: flex;
+}
